@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wabi Tafese — AI &amp; EdTech Builder</title>
+<meta name="description" content="Wabi Tafese — a Grade 11 self-taught developer from Ethiopia building AI systems for education, including Isarion and AfriVoice AI. INSA Cyber Talent semifinalist.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://wabix2.github.io/">
+<meta name="google-site-verification" content="OHIyla4myHHDGAW-gfSCeUrx2ijIfBPK3SIQg7NVU30" />
+<meta name="theme-color" content="#0a0e17">
+<meta name="color-scheme" content="dark">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wabi Tafese">
+<meta property="og:url" content="https://wabix2.github.io/">
+<meta property="og:title" content="Wabi Tafese — AI & EdTech Builder">
+<meta property="og:description" content="Building AI systems that improve education and solve real problems in Africa and beyond.">
+<meta property="og:image" content="https://wabix2.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Wabi Tafese — AI & EdTech builder">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wabi Tafese — AI & EdTech Builder">
+<meta name="twitter:description" content="Building AI systems that improve education and solve real problems in Africa and beyond.">
+<meta name="twitter:image" content="https://wabix2.github.io/og-image.png">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/photo.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Wabi Tafese",
+  "url": "https://wabix2.github.io/",
+  "image": "https://wabix2.github.io/photo.png",
+  "jobTitle": "AI & EdTech Builder",
+  "description": "Self-taught developer and AI builder from Ethiopia, building AI-powered education tools.",
+  "address": { "@type": "PostalAddress", "addressLocality": "Addis Ababa", "addressCountry": "ET" },
+  "knowsAbout": ["Python", "Machine Learning", "Android Development", "Cybersecurity", "NLP"],
+  "sameAs": [
+    "https://github.com/wabix2",
+    "https://linkedin.com/in/wabi-tafese"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#0a0e17', surface: '#10141f', surface2: '#161b29', line: '#232a3d',
+          gold: { DEFAULT: '#e8b34e', bright: '#f4c96a' },
+          green: { DEFAULT: '#3fa66b', bright: '#57c483' },
+          violet: '#9c8ff0', sky: '#63b8d9', muted: '#93a0c2',
+        },
+        fontFamily: {
+          display: ['"Unbounded"', 'sans-serif'],
+          body: ['"Inter"', 'sans-serif'],
+          mono: ['"IBM Plex Mono"', 'monospace'],
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  html{background:#0a0e17;}
+  body{font-family:'Inter',sans-serif;background-color:#0a0e17;color:#edeff7;
+    background-image:radial-gradient(ellipse 800px 500px at 90% -5%, rgba(232,179,78,0.08), transparent 60%),
+      radial-gradient(ellipse 700px 500px at 5% 30%, rgba(63,166,107,0.07), transparent 60%);
+    background-attachment:fixed;}
+  .font-display{font-family:'Unbounded',sans-serif;}
+  .font-mono{font-family:'IBM Plex Mono',monospace;}
+  ::selection{background:rgba(232,179,78,0.35);color:#fff;}
+  ::-webkit-scrollbar{width:10px;}
+  ::-webkit-scrollbar-track{background:#0a0e17;}
+  ::-webkit-scrollbar-thumb{background:#232a3d;border-radius:8px;}
+  :focus-visible{outline:2px solid #f4c96a;outline-offset:3px;border-radius:4px;}
+
+  #stars{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+  .star{position:absolute;background:#fff;border-radius:50%;opacity:.6;animation:twinkle 4s ease-in-out infinite;}
+  @keyframes twinkle{0%,100%{opacity:.15;}50%{opacity:.9;}}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);}
+  .reveal.is-visible{opacity:1;transform:translateY(0);}
+
+  .gold-gradient{background:linear-gradient(100deg,#f4c96a 0%,#e8b34e 50%,#57c483 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .btn-primary{background:linear-gradient(135deg,#f4c96a,#e8b34e);color:#1a1406;box-shadow:0 10px 28px -8px rgba(232,179,78,.55);}
+  .btn-primary:hover{box-shadow:0 14px 32px -6px rgba(232,179,78,.7);transform:translateY(-1px);}
+
+  .orbit-wrap{position:relative;width:100%;aspect-ratio:1/1;max-width:380px;margin:0 auto;}
+  .orbit-ring{position:absolute;top:50%;left:50%;border:1px solid rgba(150,160,200,0.25);border-radius:50%;transform:translate(-50%,-50%);}
+  .sun{position:absolute;top:50%;left:50%;width:52px;height:52px;margin:-26px 0 0 -26px;border-radius:50%;
+       background:radial-gradient(circle at 35% 30%, #fce3ac, #e8b34e 60%, #b5822f);
+       box-shadow:0 0 40px 8px rgba(232,179,78,0.45);}
+  .planet-track{position:absolute;top:50%;left:50%;width:0;height:0;animation:spin linear infinite;}
+  .planet{position:absolute;border-radius:50%;box-shadow:0 0 10px rgba(0,0,0,.4);}
+  @keyframes spin{from{transform:translate(-50%,-50%) rotate(0deg);}to{transform:translate(-50%,-50%) rotate(360deg);}}
+
+  .timeline-item{position:relative;padding-left:28px;}
+  .timeline-item::before{content:'';position:absolute;left:0;top:6px;width:9px;height:9px;border-radius:50%;background:#e8b34e;box-shadow:0 0 0 4px rgba(232,179,78,0.15);}
+  .timeline-item::after{content:'';position:absolute;left:4px;top:16px;bottom:-28px;width:1px;background:#232a3d;}
+  .timeline-item:last-child::after{display:none;}
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1!important;transform:none!important;transition:none!important;}
+    .planet-track{animation:none!important;}
+    .star{animation:none!important;opacity:.4!important;}
+  }
+</style>
+</head>
+<body class="antialiased">
+<div id="stars"></div>
+
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[999] focus:bg-gold focus:text-ink focus:px-4 focus:py-2 focus:rounded-lg">Skip to content</a>
+
+<header id="site-header" class="sticky top-0 z-50">
+  <div class="absolute inset-0 bg-ink/75 backdrop-blur-xl border-b border-line/70"></div>
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between relative">
+    <a href="#main" class="font-display font-bold text-white text-base tracking-tight">Wabi<span class="text-gold">.</span></a>
+    <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-muted">
+      <a href="#about" class="hover:text-white transition">About</a>
+      <a href="#projects" class="hover:text-white transition">Projects</a>
+      <a href="#certificates" class="hover:text-white transition">Certificates</a>
+      <a href="#achievements" class="hover:text-white transition">Achievements</a>
+      <a href="#now" class="hover:text-white transition">Now</a>
+      <a href="#contact" class="hover:text-white transition">Contact</a>
+    </nav>
+    <a href="/cv.pdf" target="_blank" rel="noopener" class="btn-primary text-sm font-semibold px-4 py-2 rounded-lg transition">Resume</a>
+  </div>
+</header>
+
+<main id="main" class="relative z-10">
+
+  <!-- HERO -->
+  <section class="max-w-6xl mx-auto px-5 sm:px-8 pt-16 pb-20 sm:pt-20">
+    <div class="reveal flex flex-wrap items-center gap-3 mb-8 font-mono text-xs text-muted">
+      <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-green-bright"></span>Available for meaningful collaborations</span>
+      <span class="text-line">/</span>
+      <span>Addis Ababa, ET</span>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-14 items-center">
+      <div class="reveal">
+        <p class="font-mono text-xs uppercase tracking-widest text-gold mb-5">AI &amp; EdTech Builder</p>
+        <h1 class="font-display font-bold text-4xl sm:text-5xl leading-[1.12] text-white mb-6">
+          Wabi<br><span class="gold-gradient">Tafese.</span>
+        </h1>
+        <p class="text-muted text-lg leading-relaxed mb-9 max-w-lg">
+          Building AI systems that improve education and solve real problems in Africa and beyond.
+        </p>
+        <div class="flex flex-wrap items-center gap-4 mb-10">
+          <a href="#projects" class="btn-primary font-semibold px-6 py-3 rounded-xl transition text-sm">View projects</a>
+          <a href="#contact" class="text-white/90 hover:text-white font-medium px-2 py-3 rounded-xl transition text-sm flex items-center gap-2 group">
+            Contact me
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+          </a>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div><p class="font-display font-bold text-2xl text-white">3+</p><p class="text-xs text-muted font-mono mt-1">AI Projects</p></div>
+          <div><p class="font-display font-bold text-2xl text-white">9+</p><p class="text-xs text-muted font-mono mt-1">Certifications</p></div>
+          <div><p class="font-display font-bold text-2xl text-white">2025</p><p class="text-xs text-muted font-mono mt-1">INSA Semifinalist</p></div>
+          <div><p class="font-display font-bold text-2xl text-white">G11</p><p class="text-xs text-muted font-mono mt-1">Ethiopia</p></div>
+        </div>
+      </div>
+
+      <div class="reveal" style="transition-delay:.1s">
+        <div class="orbit-wrap">
+          <div class="orbit-ring" style="width:55%;height:55%;"></div>
+          <div class="orbit-ring" style="width:78%;height:78%;"></div>
+          <div class="orbit-ring" style="width:100%;height:100%;"></div>
+          <div class="sun"></div>
+          <div class="planet-track" style="width:55%;height:55%;animation-duration:9s;">
+            <div class="planet" style="width:14px;height:14px;top:0;left:0;margin:-7px 0 0 calc(27.5% - 7px);background:#57c483;"></div>
+          </div>
+          <div class="planet-track" style="width:78%;height:78%;animation-duration:16s;animation-direction:reverse;">
+            <div class="planet" style="width:11px;height:11px;top:0;left:0;margin:-5.5px 0 0 calc(39% - 5.5px);background:#9c8ff0;"></div>
+          </div>
+          <div class="planet-track" style="width:100%;height:100%;animation-duration:24s;">
+            <div class="planet" style="width:16px;height:16px;top:0;left:0;margin:-8px 0 0 calc(50% - 8px);background:#63b8d9;"></div>
+          </div>
+        </div>
+        <p class="text-center text-xs font-mono text-muted/70 mt-4">01 / builder's public lab notebook — 02 / Grade 11 · Ethiopia</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="border-t border-line/70 py-20">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="grid md:grid-cols-[220px_1fr] gap-12 items-start mb-16">
+        <div class="reveal">
+          <img src="/photo.png" alt="Photo of Wabi Tafese" class="w-40 h-40 rounded-2xl object-cover border border-line shadow-xl shadow-black/30">
+        </div>
+        <div class="reveal" style="transition-delay:.08s">
+          <p class="font-mono text-xs uppercase tracking-widest text-green-bright mb-4">01 / context · intent</p>
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mb-5">Hi, I'm Wabi. Builder &amp; explorer.</h2>
+          <div class="text-slate-200 text-[16px] leading-relaxed space-y-4 max-w-2xl">
+            <p>I'm a self-taught developer and AI builder from Ethiopia, currently in Grade 11. I started coding out of curiosity — wanting to understand how the tools shaping the world actually work. That curiosity grew into building real AI systems, founding Isarion, and competing in national cybersecurity competitions.</p>
+            <p>I believe technology is one of the most powerful forces for change in Africa, and I'm committed to being part of that change — not as a bystander, but as a builder. My focus is AI-powered education tools, but my drive goes further: I want to help create the kinds of companies that don't exist yet in Ethiopia.</p>
+            <p>I'm a team leader who works across disciplines — I collaborate, communicate, and build in public. I'm preparing for global opportunities while remaining grounded in where I come from.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stack snapshot -->
+      <div class="reveal">
+        <p class="font-mono text-xs uppercase tracking-widest text-sky mb-6">/ stack.snapshot</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+          <div>
+            <p class="text-white font-medium text-sm mb-3">Languages</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface text-slate-300">Python</span>
+              <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface text-slate-300">JavaScript</span>
+              <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface text-slate-300">HTML</span>
+              <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface text-slate-300">CSS</span>
+              <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface text-slate-300">Kotlin</span>
+            </div>
+          </div>
+          <div>
+            <p class="text-white font-medium text-sm mb-3">Frameworks &amp; Tools</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface text-slate-300">React</span>
+              <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface text-slate-300">Flutter</span>
+              <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface text-slate-300">FastAPI</span>
+              <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface text-slate-300">Firebase</span>
+              <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface text-slate-300">Git</span>
+              <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface text-slate-300">GitHub</span>
+            </div>
+          </div>
+          <div>
+            <p class="text-white font-medium text-sm mb-3">AI / ML</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface text-slate-300">Machine Learning</span>
+              <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface text-slate-300">Prompt Engineering</span>
+              <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface text-slate-300">LLM Integration</span>
+              <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface text-slate-300">NLP</span>
+            </div>
+          </div>
+          <div>
+            <p class="text-white font-medium text-sm mb-3">Security</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface text-slate-300">OSINT</span>
+              <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface text-slate-300">Threat Intelligence</span>
+              <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface text-slate-300">Network Recon</span>
+            </div>
+          </div>
+          <div>
+            <p class="text-white font-medium text-sm mb-3">Other</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface text-slate-300">UI/UX Collaboration</span>
+              <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface text-slate-300">Problem Solving</span>
+              <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface text-slate-300">Team Leadership</span>
+              <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface text-slate-300">Public Speaking</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience timeline -->
+      <div class="reveal mt-16">
+        <p class="font-mono text-xs uppercase tracking-widest text-gold mb-6">01.1 / Experience</p>
+        <div class="space-y-7 max-w-2xl">
+          <div class="timeline-item">
+            <p class="font-mono text-xs text-gold mb-1">2025 – Present</p>
+            <h3 class="text-white font-semibold text-[15px] mb-1">Founder, Isarion</h3>
+            <p class="text-muted text-sm leading-relaxed">Building an AI-powered personalized learning platform with AI tutoring, OCR, PDF learning, spaced repetition, and personalized study plans.</p>
+          </div>
+          <div class="timeline-item">
+            <p class="font-mono text-xs text-gold mb-1">2025</p>
+            <h3 class="text-white font-semibold text-[15px] mb-1">AfriVoice AI</h3>
+            <p class="text-muted text-sm leading-relaxed">Speech-to-text and NLP tooling for African languages, aiming to close the AI representation gap for communities major platforms overlook.</p>
+          </div>
+          <div class="timeline-item">
+            <p class="font-mono text-xs text-gold mb-1">2025</p>
+            <h3 class="text-white font-semibold text-[15px] mb-1">INSA Cyber Talent</h3>
+            <p class="text-muted text-sm leading-relaxed">Advanced to the national semifinal in Ethiopia's premier cybersecurity competition.</p>
+          </div>
+          <div class="timeline-item">
+            <p class="font-mono text-xs text-gold mb-1">2025</p>
+            <h3 class="text-white font-semibold text-[15px] mb-1">Cyber Threat Investigation</h3>
+            <p class="text-muted text-sm leading-relaxed">Conducted an OSINT-based investigation into abusive online infrastructure and reported it for takedown, alongside an authorized red-team exercise as part of the same program.</p>
+          </div>
+          <div class="timeline-item">
+            <p class="font-mono text-xs text-gold mb-1">2024</p>
+            <h3 class="text-white font-semibold text-[15px] mb-1">RK4 Planetary Motion Simulation</h3>
+            <p class="text-muted text-sm leading-relaxed">Orbital mechanics simulation using Runge-Kutta 4th order integration.</p>
+          </div>
+          <div class="timeline-item">
+            <p class="font-mono text-xs text-gold mb-1">2024</p>
+            <h3 class="text-white font-semibold text-[15px] mb-1">Science Fair Research</h3>
+            <p class="text-muted text-sm leading-relaxed">Independent research on applied AI and data analysis for real-world problems.</p>
+          </div>
+          <div class="timeline-item">
+            <p class="font-mono text-xs text-gold mb-1">Ongoing</p>
+            <h3 class="text-white font-semibold text-[15px] mb-1">Android &amp; Kotlin</h3>
+            <p class="text-muted text-sm leading-relaxed">Studying Android architecture through Google's Udacity programs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="border-t border-line/70 py-20">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="reveal mb-14 max-w-xl">
+        <p class="font-mono text-xs uppercase tracking-widest text-gold mb-4">02 / things I ship</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mb-4">Featured projects.</h2>
+        <p class="text-muted text-[15px] leading-relaxed">A selection of experiments and systems. Each one started as a question and became something real.</p>
+      </div>
+
+      <div class="grid gap-5">
+        <!-- Warden CI -->
+        <div class="reveal bg-surface border border-line rounded-2xl p-8">
+          <div class="flex flex-wrap items-center gap-3 mb-4">
+            <span class="font-mono text-[10px] px-2.5 py-1 rounded-full bg-green/15 text-green-bright border border-green/30">Recently completed</span>
+            <span class="font-mono text-[10px] px-2.5 py-1 rounded-full bg-surface2 text-muted border border-line">01</span>
+          </div>
+          <h3 class="font-display font-semibold text-white text-xl mb-3">Warden CI</h3>
+          <p class="text-muted text-sm leading-relaxed mb-3 max-w-2xl">A GitHub-native security tool for the AI-driven software supply chain. Warden CI scans pull requests the moment they open, flags npm and PyPI packages that don't actually exist, catches hardcoded secrets and unsafe <code class="font-mono text-slate-300">eval()</code>, and posts results as a GitHub Check — without storing repository source code.</p>
+          <p class="text-muted/70 text-xs leading-relaxed mb-5 max-w-2xl font-mono">long vision: grow from a focused PR security layer into a trusted security platform for engineering teams — private-repo coverage, team workflows, and deeper policy controls.</p>
+          <div class="flex flex-wrap gap-1.5 mb-6">
+            <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface2 text-slate-300">GitHub Apps</span>
+            <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface2 text-slate-300">AI Supply Chain Security</span>
+            <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface2 text-slate-300">npm + PyPI Defense</span>
+            <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface2 text-slate-300">Secret Auditing</span>
+            <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface2 text-slate-300">HMAC Webhooks</span>
+            <span class="font-mono text-[11px] px-2.5 py-1 rounded-full border border-line bg-surface2 text-slate-300">Privacy-First</span>
+          </div>
+          <a href="https://github.com/marketplace/warden-ci" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-gold hover:text-white text-sm font-medium transition">
+            Open Warden CI
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+          </a>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <!-- Isarion -->
+          <div class="reveal bg-surface border border-line rounded-2xl p-7">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="font-mono text-[10px] px-2.5 py-1 rounded-full bg-gold/15 text-gold border border-gold/30">Released</span>
+              <span class="font-mono text-[10px] text-muted">02</span>
+            </div>
+            <h3 class="font-display font-semibold text-white text-lg mb-2">Isarion</h3>
+            <p class="text-muted text-sm leading-relaxed mb-4">My flagship startup — an AI-powered learning platform helping students study smarter through AI tutoring, OCR, PDF learning, active recall, and spaced repetition.</p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="font-mono text-[11px] px-2 py-0.5 rounded-full border border-line text-slate-400">Python</span>
+              <span class="font-mono text-[11px] px-2 py-0.5 rounded-full border border-line text-slate-400">FastAPI</span>
+              <span class="font-mono text-[11px] px-2 py-0.5 rounded-full border border-line text-slate-400">React</span>
+              <span class="font-mono text-[11px] px-2 py-0.5 rounded-full border border-line text-slate-400">LLM APIs</span>
+              <span class="font-mono text-[11px] px-2 py-0.5 rounded-full border border-line text-slate-400">OCR</span>
+            </div>
+            <a href="https://github.com/wabix2/Lumiq-/releases/tag/v1.0.0" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-gold hover:text-white text-xs font-medium transition">Open Isarion v1.0.0
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+            </a>
+          </div>
+          <!-- Launchpad -->
+          <div class="reveal bg-surface border border-line rounded-2xl p-7" style="transition-delay:.03s">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="font-mono text-[10px] px-2.5 py-1 rounded-full bg-green/15 text-green-bright border border-green/30">Live</span>
+              <span class="font-mono text-[10px] text-muted">03</span>
+            </div>
+            <h3 class="font-display font-semibold text-white text-lg mb-2">Launchpad</h3>
+            <p class="text-muted text-sm leading-relaxed mb-4">A hub site bringing together the products I've built and shipped — one place to browse everything, instead of hunting across separate repos and pages.</p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="font-mono text-[11px] px-2 py-0.5 rounded-full border border-line text-slate-400">Product Hub</span>
+              <span class="font-mono text-[11px] px-2 py-0.5 rounded-full border border-line text-slate-400">GitHub Pages</span>
+            </div>
+            <a href="https://wabix2.github.io/Launchpad" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-gold hover:text-white text-xs font-medium transition">Open Launchpad
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+            </a>
+          </div>
+          <!-- AfriVoice AI -->
+          <div class="reveal bg-surface border border-line rounded-2xl p-7" style="transition-delay:.05s">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="font-mono text-[10px] px-2.5 py-1 rounded-full bg-sky/15 text-sky border border-sky/30">Active research</span>
+              <span class="font-mono text-[10px] text-muted">04</span>
+            </div>
+            <h3 class="font-display font-semibold text-white text-lg mb-2">AfriVoice AI</h3>
+            <p class="text-muted text-sm leading-relaxed mb-4">NLP and speech-to-text tooling built for African languages — making voice technology accessible to communities major platforms overlook.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="font-mono text-[11px] px-2 py-0.5 rounded-full border border-line text-slate-400">Python</span>
+              <span class="font-mono text-[11px] px-2 py-0.5 rounded-full border border-line text-slate-400">Hugging Face</span>
+              <span class="font-mono text-[11px] px-2 py-0.5 rounded-full border border-line text-slate-400">Speech-to-Text</span>
+              <span class="font-mono text-[11px] px-2 py-0.5 rounded-full border border-line text-slate-400">NLP</span>
+            </div>
+          </div>
+          <!-- Cyber investigation -->
+          <div class="reveal bg-surface border border-line rounded-2xl p-7" style="transition-delay:.1s">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="font-mono text-[10px] px-2.5 py-1 rounded-full bg-green/15 text-green-bright border border-green/30">Completed</span>
+              <span class="font-mono text-[10px] text-muted">05</span>
+            </div>
+            <h3 class="font-display font-semibold text-white text-lg mb-2">Cyber Threat Investigation</h3>
+            <p class="text-muted text-sm leading-relaxed mb-4">A two-phase cybersecurity exercise: an OSINT-led investigation into abusive online infrastructure that was reported for takedown, and a separate authorized red-team simulation.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="font-mono text-[11px] px-2 py-0.5 rounded-full border border-line text-slate-400">OSINT</span>
+              <span class="font-mono text-[11px] px-2 py-0.5 rounded-full border border-line text-slate-400">Threat Intel</span>
+              <span class="font-mono text-[11px] px-2 py-0.5 rounded-full border border-line text-slate-400">Red Team (Authorized)</span>
+            </div>
+          </div>
+          <!-- RK4 -->
+          <div class="reveal bg-surface border border-line rounded-2xl p-7" style="transition-delay:.15s">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="font-mono text-[10px] px-2.5 py-1 rounded-full bg-green/15 text-green-bright border border-green/30">Completed</span>
+              <span class="font-mono text-[10px] text-muted">06</span>
+            </div>
+            <h3 class="font-display font-semibold text-white text-lg mb-2">RK4 Planetary Motion</h3>
+            <p class="text-muted text-sm leading-relaxed mb-4">Physics simulation modeling orbital mechanics using 4th-order Runge-Kutta numerical integration — accurate enough to simulate real planetary trajectories.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="font-mono text-[11px] px-2 py-0.5 rounded-full border border-line text-slate-400">Python</span>
+              <span class="font-mono text-[11px] px-2 py-0.5 rounded-full border border-line text-slate-400">NumPy</span>
+              <span class="font-mono text-[11px] px-2 py-0.5 rounded-full border border-line text-slate-400">Matplotlib</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div class="reveal bg-surface border border-line rounded-2xl p-7">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="font-mono text-[10px] px-2.5 py-1 rounded-full bg-green/15 text-green-bright border border-green/30">Completed</span>
+              <span class="font-mono text-[10px] text-muted">07</span>
+            </div>
+            <h3 class="font-display font-semibold text-white text-lg mb-2">Science Fair Research</h3>
+            <p class="text-muted text-sm leading-relaxed mb-4">Independent research on applied AI and data analysis for real-world problems, submitted for national science fair recognition.</p>
+            <a href="/research_paper.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-gold hover:text-white text-xs font-medium transition">Read the paper
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+            </a>
+          </div>
+          <div class="reveal bg-surface border border-line rounded-2xl p-7" style="transition-delay:.05s">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="font-mono text-[10px] px-2.5 py-1 rounded-full bg-gold/15 text-gold border border-gold/30">In progress</span>
+              <span class="font-mono text-[10px] text-muted">08</span>
+            </div>
+            <h3 class="font-display font-semibold text-white text-lg mb-2">Android Development</h3>
+            <p class="text-muted text-sm leading-relaxed mb-4">Android app development using Kotlin and Jetpack Compose, following Google's Android Basics curriculum — clean architecture and real-world app patterns.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="font-mono text-[11px] px-2 py-0.5 rounded-full border border-line text-slate-400">Kotlin</span>
+              <span class="font-mono text-[11px] px-2 py-0.5 rounded-full border border-line text-slate-400">Jetpack Compose</span>
+              <span class="font-mono text-[11px] px-2 py-0.5 rounded-full border border-line text-slate-400">Firebase</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATES -->
+  <section id="certificates" class="border-t border-line/70 py-20">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="reveal mb-14 max-w-xl">
+        <p class="font-mono text-xs uppercase tracking-widest text-green-bright mb-4">03 / learning in public</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">Certifications.</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+        <a href="/certificates/machine_learning.pdf" target="_blank" rel="noopener" class="reveal group bg-surface border border-line rounded-xl p-5 hover:border-green/40 transition-colors flex items-center justify-between">
+          <div><p class="text-white font-medium text-sm mb-1">Supervised Machine Learning</p><p class="text-muted text-xs font-mono">DeepLearning.AI · Stanford Online / Coursera</p></div>
+          <svg class="w-4 h-4 text-muted group-hover:text-green-bright transition" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+        <a href="/certificates/project_management.pdf" target="_blank" rel="noopener" class="reveal group bg-surface border border-line rounded-xl p-5 hover:border-green/40 transition-colors flex items-center justify-between" style="transition-delay:.03s">
+          <div><p class="text-white font-medium text-sm mb-1">Project Management Fundamentals</p><p class="text-muted text-xs font-mono">Google / Coursera</p></div>
+          <svg class="w-4 h-4 text-muted group-hover:text-green-bright transition" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+        <a href="/certificates/kind_koala_club.pdf" target="_blank" rel="noopener" class="reveal group bg-surface border border-line rounded-xl p-5 hover:border-green/40 transition-colors flex items-center justify-between" style="transition-delay:.04s">
+          <div><p class="text-white font-medium text-sm mb-1">Kind Koala Club — IT Team</p><p class="text-muted text-xs font-mono">Kind Koala Ethiopia · 2025/26</p></div>
+          <svg class="w-4 h-4 text-muted group-hover:text-green-bright transition" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+        <a href="/certificates/google_cybersecurity.pdf" target="_blank" rel="noopener" class="reveal group bg-surface border border-line rounded-xl p-5 hover:border-green/40 transition-colors flex items-center justify-between" style="transition-delay:.06s">
+          <div><p class="text-white font-medium text-sm mb-1">Foundations of Cybersecurity</p><p class="text-muted text-xs font-mono">Google / Coursera</p></div>
+          <svg class="w-4 h-4 text-muted group-hover:text-green-bright transition" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+        <a href="/certificates/android_basics.pdf" target="_blank" rel="noopener" class="reveal group bg-surface border border-line rounded-xl p-5 hover:border-green/40 transition-colors flex items-center justify-between" style="transition-delay:.09s">
+          <div><p class="text-white font-medium text-sm mb-1">Android Basics</p><p class="text-muted text-xs font-mono">Google / Udacity · Five Million Coders</p></div>
+          <svg class="w-4 h-4 text-muted group-hover:text-green-bright transition" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+        <a href="/certificates/android_kotlin.pdf" target="_blank" rel="noopener" class="reveal group bg-surface border border-line rounded-xl p-5 hover:border-green/40 transition-colors flex items-center justify-between" style="transition-delay:.12s">
+          <div><p class="text-white font-medium text-sm mb-1">Android with Kotlin</p><p class="text-muted text-xs font-mono">Google / Udacity · Five Million Coders</p></div>
+          <svg class="w-4 h-4 text-muted group-hover:text-green-bright transition" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+        <a href="/certificates/ai_fundamentals.pdf" target="_blank" rel="noopener" class="reveal group bg-surface border border-line rounded-xl p-5 hover:border-green/40 transition-colors flex items-center justify-between" style="transition-delay:.15s">
+          <div><p class="text-white font-medium text-sm mb-1">AI Fundamentals</p><p class="text-muted text-xs font-mono">Five Million Coders</p></div>
+          <svg class="w-4 h-4 text-muted group-hover:text-green-bright transition" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+        <a href="/certificates/data_analysis.pdf" target="_blank" rel="noopener" class="reveal group bg-surface border border-line rounded-xl p-5 hover:border-green/40 transition-colors flex items-center justify-between" style="transition-delay:.18s">
+          <div><p class="text-white font-medium text-sm mb-1">Data Analysis with Python</p><p class="text-muted text-xs font-mono">Coursera · University of Michigan</p></div>
+          <svg class="w-4 h-4 text-muted group-hover:text-green-bright transition" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+        <a href="/certificates/python_umich.pdf" target="_blank" rel="noopener" class="reveal group bg-surface border border-line rounded-xl p-5 hover:border-green/40 transition-colors flex items-center justify-between" style="transition-delay:.21s">
+          <div><p class="text-white font-medium text-sm mb-1">Python for Everybody</p><p class="text-muted text-xs font-mono">University of Michigan / Coursera</p></div>
+          <svg class="w-4 h-4 text-muted group-hover:text-green-bright transition" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+        <a href="/certificates/science_fair_certificate_pending_update.pdf" target="_blank" rel="noopener" class="reveal group bg-surface border border-line rounded-xl p-5 hover:border-green/40 transition-colors flex items-center justify-between" style="transition-delay:.24s">
+          <div><p class="text-white font-medium text-sm mb-1">STEM Day — Certificate of Participation</p><p class="text-muted text-xs font-mono">Kotebe University of Education</p></div>
+          <svg class="w-4 h-4 text-muted group-hover:text-green-bright transition" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+      </div>
+      <div class="reveal flex flex-wrap gap-x-8 gap-y-2 text-sm font-mono">
+        <a href="/research_paper.pdf" target="_blank" rel="noopener" class="text-gold hover:text-white transition">Research paper →</a>
+        <a href="/cv.pdf" target="_blank" rel="noopener" class="text-gold hover:text-white transition">Curriculum vitae →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements" class="border-t border-line/70 py-20">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="reveal mb-14 max-w-xl">
+        <p class="font-mono text-xs uppercase tracking-widest text-violet mb-4">04 / signals, not slogans</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">Key achievements.</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div class="reveal bg-surface border border-line rounded-2xl p-6">
+          <p class="font-mono text-xs text-gold mb-2">01</p>
+          <h3 class="text-white font-semibold text-[15px] mb-2">INSA Cyber Talent Semifinalist (2025)</h3>
+          <p class="text-muted text-sm leading-relaxed">Advanced to the national semifinal in Ethiopia's premier cybersecurity competition.</p>
+        </div>
+        <div class="reveal bg-surface border border-line rounded-2xl p-6" style="transition-delay:.05s">
+          <p class="font-mono text-xs text-gold mb-2">02</p>
+          <h3 class="text-white font-semibold text-[15px] mb-2">Founded Isarion</h3>
+          <p class="text-muted text-sm leading-relaxed">Built an AI-powered education startup as a Grade 11 student to make personalized learning more accessible in Ethiopia.</p>
+        </div>
+        <div class="reveal bg-surface border border-line rounded-2xl p-6" style="transition-delay:.1s">
+          <p class="font-mono text-xs text-gold mb-2">03</p>
+          <h3 class="text-white font-semibold text-[15px] mb-2">Reported Abusive Infrastructure</h3>
+          <p class="text-muted text-sm leading-relaxed">Identified and reported abusive online infrastructure to the responsible hosting providers, contributing to its takedown.</p>
+        </div>
+        <div class="reveal bg-surface border border-line rounded-2xl p-6" style="transition-delay:.15s">
+          <p class="font-mono text-xs text-gold mb-2">04</p>
+          <h3 class="text-white font-semibold text-[15px] mb-2">AfriVoice AI Research</h3>
+          <p class="text-muted text-sm leading-relaxed">Contributing to NLP research for African language representation in AI, addressing a critical gap in voice technology.</p>
+        </div>
+        <div class="reveal bg-surface border border-line rounded-2xl p-6" style="transition-delay:.2s">
+          <p class="font-mono text-xs text-gold mb-2">05</p>
+          <h3 class="text-white font-semibold text-[15px] mb-2">Authorized Red Team Exercise</h3>
+          <p class="text-muted text-sm leading-relaxed">Completed an authorized red-team simulation as part of a structured cybersecurity training program.</p>
+        </div>
+        <div class="reveal bg-surface border border-line rounded-2xl p-6" style="transition-delay:.25s">
+          <p class="font-mono text-xs text-gold mb-2">06</p>
+          <h3 class="text-white font-semibold text-[15px] mb-2">Self-Built Portfolio</h3>
+          <p class="text-muted text-sm leading-relaxed">Designed and built this portfolio from scratch, iterating on layout, motion, and visual identity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOW -->
+  <section id="now" class="border-t border-line/70 py-20">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="reveal mb-12 max-w-xl">
+        <p class="font-mono text-xs uppercase tracking-widest text-sky mb-4">05 / live queue</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">What I'm doing now.</h2>
+      </div>
+      <div class="reveal grid sm:grid-cols-2 gap-4 max-w-3xl">
+        <div class="flex items-start gap-3 bg-surface border border-line rounded-xl p-4">
+          <span class="w-1.5 h-1.5 rounded-full bg-green-bright mt-2 flex-shrink-0"></span>
+          <p class="text-sm text-slate-300">Growing Isarion — onboarding new users and iterating on the AI tutoring engine.</p>
+        </div>
+        <div class="flex items-start gap-3 bg-surface border border-line rounded-xl p-4">
+          <span class="w-1.5 h-1.5 rounded-full bg-green-bright mt-2 flex-shrink-0"></span>
+          <p class="text-sm text-slate-300">Studying for Grade 11 national exams, balancing academics with technical work.</p>
+        </div>
+        <div class="flex items-start gap-3 bg-surface border border-line rounded-xl p-4">
+          <span class="w-1.5 h-1.5 rounded-full bg-green-bright mt-2 flex-shrink-0"></span>
+          <p class="text-sm text-slate-300">Expanding cybersecurity skills in controlled, authorized training environments.</p>
+        </div>
+        <div class="flex items-start gap-3 bg-surface border border-line rounded-xl p-4">
+          <span class="w-1.5 h-1.5 rounded-full bg-green-bright mt-2 flex-shrink-0"></span>
+          <p class="text-sm text-slate-300">Deepening Kotlin and Jetpack Compose knowledge for Android architecture.</p>
+        </div>
+        <div class="flex items-start gap-3 bg-surface border border-line rounded-xl p-4 sm:col-span-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-green-bright mt-2 flex-shrink-0"></span>
+          <p class="text-sm text-slate-300">Preparing for global opportunities — applying to international programs, competitions, and internships.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="border-t border-line/70 py-24">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 text-center">
+      <div class="reveal max-w-xl mx-auto">
+        <p class="font-mono text-xs uppercase tracking-widest text-gold mb-4">06 / open channel</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mb-5">Let's build something together.</h2>
+        <p class="text-muted mb-9">I'm always open to collaborating on AI, education, cybersecurity, or Africa-focused tech projects. If you're working on something meaningful, I want to hear about it.</p>
+        <div class="flex flex-wrap items-center justify-center gap-4 mb-12">
+          <a href="mailto:wabitafese9@gmail.com" class="btn-primary font-semibold px-6 py-3 rounded-xl text-sm transition">Email me</a>
+          <a href="https://github.com/wabix2" target="_blank" rel="noopener" class="border border-line hover:border-gold/40 text-white font-medium px-6 py-3 rounded-xl text-sm transition">GitHub</a>
+          <a href="https://linkedin.com/in/wabi-tafese" target="_blank" rel="noopener" class="border border-line hover:border-gold/40 text-white font-medium px-6 py-3 rounded-xl text-sm transition">LinkedIn</a>
+        </div>
+        <blockquote class="font-display text-lg text-slate-300 italic max-w-md mx-auto">
+          "Technology is one of the most powerful forces for change in Africa — and I'm committed to being part of that change."
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="border-t border-line/70 py-8 relative z-10">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted">
+    <span>&copy; 2026 Wabi Tafese.</span>
+    <span class="font-mono">built line by line, orbit by orbit</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var starsEl = document.getElementById('stars');
+  if (starsEl) {
+    var n = window.innerWidth < 640 ? 60 : 110;
+    for (var i=0;i<n;i++){
+      var s = document.createElement('div');
+      s.className='star';
+      var size = Math.random()*2+1;
+      s.style.width=size+'px'; s.style.height=size+'px';
+      s.style.top=(Math.random()*100)+'%'; s.style.left=(Math.random()*100)+'%';
+      s.style.animationDelay=(Math.random()*4)+'s';
+      starsEl.appendChild(s);
+    }
+  }
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){ entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+      });
+    }, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+})();
+</script>
+
+</body>
+</html>
