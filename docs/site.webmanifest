@@ -1,0 +1,14 @@
+{
+  "name": "Wabi Tafese — AI & EdTech Builder",
+  "short_name": "Wabi Tafese",
+  "description": "Portfolio of Wabi Tafese: AI systems for education, security tools and open research.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0a0e17",
+  "theme_color": "#0a0e17",
+  "icons": [
+    { "src": "/photo.png", "sizes": "819x819", "type": "image/png", "purpose": "any" },
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
