@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wabix2.github.io/sitemap.xml
