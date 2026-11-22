@@ -1,14 +1,22 @@
 {
-  "name": "Wabi Tafese — AI & EdTech Builder",
+  "name": "Wabi Tafese — Software engineer and security researcher",
   "short_name": "Wabi Tafese",
-  "description": "Portfolio of Wabi Tafese: AI systems for education, security tools and open research.",
+  "description": "Portfolio of Wabi Tafese: AI and security systems, research and competition work.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#0a0e17",
-  "theme_color": "#0a0e17",
+  "background_color": "#f3f4f1",
+  "theme_color": "#f3f4f1",
   "icons": [
-    { "src": "/photo.png", "sizes": "819x819", "type": "image/png", "purpose": "any" },
-    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
   ]
 }
